@@ -1,0 +1,23 @@
+.nav {
+  margin: 0;
+  padding: 0 2em;
+  background-color: var(--primary-clr-600);
+  color: white;
+}
+
+.nav__list {
+  margin: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  width: 80%;
+}
+
+.nav__brand {
+  font-size: 1.5rem;
+}
+
+.nav__link {
+
+}

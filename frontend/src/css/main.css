@@ -1,0 +1,4 @@
+.main {
+  background-color: var(--primary-clr-200);
+  min-height: 100vh;
+}

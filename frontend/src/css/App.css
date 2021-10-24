@@ -1,0 +1,21 @@
+@import-normalize;
+@import './nav.css';
+@import './main.css';
+
+*, 
+*::before, 
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-clr-600: hsl(203, 71%, 18%);
+  --primary-clr-400: hsl(203, 53%, 55%);
+  --primary-clr-200: hsl(203, 91%, 91%);
+
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
