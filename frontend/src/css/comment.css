@@ -1,0 +1,16 @@
+.comment__heading,
+.comment__text {
+  margin: 0 auto;
+  padding: 0.5em 0;
+  width: 60%;
+  color: var(--primary-clr-800)
+}
+
+.comment__heading {
+  font-size: 2rem;
+}
+
+.comment__text {
+  font-size: 1.3rem;
+  line-height: 1.3;
+}
