@@ -1,12 +1,12 @@
 .nav {
   margin: 0;
-  padding: 0 2em;
   background-color: var(--primary-clr-600);
-  color: white;
+  color: var(--primary-clr-400);
 }
 
 .nav__list {
-  margin: 0;
+  padding: 0.5em 0;
+  margin: 0 auto;
   display: flex;
   justify-content: space-around;
   align-items: center;

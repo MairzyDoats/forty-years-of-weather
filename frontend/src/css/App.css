@@ -1,6 +1,8 @@
 @import-normalize;
 @import './nav.css';
 @import './main.css';
+@import './chart.css';
+@import './comment.css';
 
 *, 
 *::before, 
@@ -9,13 +11,18 @@
 }
 
 :root {
-  --primary-clr-600: hsl(203, 71%, 18%);
-  --primary-clr-400: hsl(203, 53%, 55%);
-  --primary-clr-200: hsl(203, 91%, 91%);
+  --primary-clr-800: hsl(191, 100%, 10%);
+  --primary-clr-600: hsl(191, 100%, 17%);
+  --primary-clr-400: hsl(12, 66%, 91%);
+  --primary-clr-200: hsl(203, 94%, 86%);
 
 }
 
-body {
+body,
+h1,
+h2,
+h3,
+p {
   margin: 0;
   padding: 0;
 }

@@ -1,4 +1,22 @@
 #d3demo{
-  width: 80vw;
-  height: 50vh;
+  padding: 5em 0;
+  width: 60vw;
+  height: auto;
+  margin: 0 auto;
+}
+
+.chart__axes line {
+  stroke: var(--primary-clr-600);
+}
+
+.chart__axes path {
+  stroke: var(--primary-clr-800);
+  stroke-width: 3;
+  fill: none;
+}
+
+.chart__stroke {
+  stroke: var(--primary-clr-600);
+  stroke-width: 3;
+  fill: none;
 }
