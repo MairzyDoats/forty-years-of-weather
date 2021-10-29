@@ -1,0 +1,11 @@
+.footer {
+	display: flex;
+	justify-content: flex-end;
+	padding: 2em 5em;
+	background-color: var(--primary-clr-600);
+}
+
+.footer a {
+	color: var(--primary-clr-400);
+	text-decoration: none;
+}

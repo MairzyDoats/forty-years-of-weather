@@ -1,4 +1,4 @@
 .main {
+  padding-bottom: 6em;
   background-color: var(--primary-clr-200);
-  min-height: 100vh;
 }
