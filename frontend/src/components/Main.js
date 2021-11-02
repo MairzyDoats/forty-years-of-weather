@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Chart from './Chart';
 import Comment from './Comment';
-import Footer from './Footer';
 
 export default function Main() {
 
