@@ -1,11 +1,20 @@
 .footer {
 	display: flex;
-	justify-content: flex-end;
+	flex-direction: column;
 	padding: 2em 5em;
 	background-color: var(--primary-clr-600);
 }
 
-.footer a {
+.footer__link {
+	align-self: flex-end;
 	color: var(--primary-clr-400);
 	text-decoration: none;
+}
+
+.footer__copyright {
+	padding: 1em 0;
+	font-size: .9rem;
+	opacity: .6;
+	align-self: center;
+	color: var(--primary-clr-400);
 }
