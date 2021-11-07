@@ -23,7 +23,8 @@
 .chart__line {
   stroke: var(--primary-clr-600);
   fill: none;
-  stroke-width: 3;
+  stroke-width: 1.2;
+  stroke-dasharray: 3.5;
 }
 
 .chart__label {
@@ -31,4 +32,36 @@
   font-size: 1.1rem;
   stroke-width: 1;
   fill: var(--primary-clr-800)
+}
+
+.chart__node {
+  fill: var(--primary-clr-600);
+}
+
+.chart__node__text {
+  position: relative;
+  font-family: var(--sans-serif-font);
+  font-size: 1.3rem;
+  font-weight: bold;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+     -moz-user-select: none; /* Old versions of Firefox */
+      -ms-user-select: none; /* Internet Explorer/Edge */
+          user-select: none; /* Non-prefixed version, currently
+                                supported by Chrome, Edge, Opera and Firefox */
+  opacity: 0;
+  fill: var(--primary-clr-400);
+  stroke: var(--primary-clr-800);
+  stroke-width: 1;
+  transform: translateY(200%);
+}
+
+.chart__node:hover .chart__node__text {
+  opacity: 1;
+  transform: translate(-20px, -10px);
+}
+
+.chart__node__text:hover {
+  opacity: 0;
 }

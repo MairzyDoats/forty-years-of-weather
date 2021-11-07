@@ -8,6 +8,7 @@
 
 .comment__heading {
   font-size: 2rem;
+  font-family: var(--serif-font);
 }
 
 .comment__btn {
@@ -28,6 +29,7 @@
 
 .comment__text {
   position: relative;
+  font-family: var(--sans-serif-font);
   font-size: 1.3rem;
   line-height: 1.3;
   padding-bottom: 1em;

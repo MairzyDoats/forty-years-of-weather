@@ -1,20 +1,21 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import Chart from './Chart';
 import Comment from './Comment';
 
 export default function Main() {
 
-  const hasFetchedData = useRef(false)
   const [weatherDates, setWeatherDates] = useState([])
 
   useEffect(() => {
-    if (!hasFetchedData.current) {
-      fetch(process.env.REACT_APP_BACKEND_API_ENDPOINT)
-        .then(response => response.json())
-        .then(data => setWeatherDates(data))
-      hasFetchedData.current = true;
-    }
+    loadData();
   }, [])
+
+  const loadData = async () => {
+    const response = await fetch(process.env.REACT_APP_BACKEND_API_ENDPOINT);
+    const data = await response.json();
+    console.log(data)
+    setWeatherDates(data);
+  }
 
   return (
     <main className="main">
@@ -31,7 +32,7 @@ export default function Main() {
       />
       <Comment
         heading="A comment on climate change"
-        text="Weather is immediate and kind of chaotic, but climate change and global warming are very much a real thing. At times the temperature over the course of 40 years might not have changed a lot and that does not debunk science. There is a scientific consensus among numerous experts about climate change and its human cause. Drastic measures are necessary, this little website does not change that."
+        text="Weather is immediate and kind of chaotic, but climate change and global warming are very much a real thing. At times the temperature over the course of 40 years might not have changed a lot and that does not debunk science. There is a scientific consensus among numerous experts about global warming and its human cause. Drastic measures are necessary, this little website does not change that."
       />
     </main>
   )
