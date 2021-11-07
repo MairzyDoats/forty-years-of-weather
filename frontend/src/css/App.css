@@ -1,4 +1,3 @@
-@import-normalize;
 @import './nav.css';
 @import './main.css';
 @import './chart.css';
@@ -17,6 +16,8 @@
   --primary-clr-400: hsl(12, 66%, 91%);
   --primary-clr-200: hsl(203, 94%, 86%);
 
+  --serif-font: "Garamond", serif;
+  --sans-serif-font: "Roboto", sans-serif;
 }
 
 body,
