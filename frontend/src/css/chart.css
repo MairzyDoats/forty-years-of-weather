@@ -1,8 +1,16 @@
 #d3demo{
   padding-top: 5em;
-  width: 60vw;
-  height: 30em;
-  margin: 0 auto 10em;
+  max-width: 1400px;
+  height: 60vh;
+  margin: 0 auto 12em;
+}
+
+.chart {
+  overflow-y: hidden;
+}
+
+.chart__axes {
+  animation: fade-in 1s ease;
 }
 
 .chart__axes line {
@@ -18,6 +26,7 @@
 
 .chart__axes text {
   color: var(--primary-clr-800);
+  font-size: 1rem;
 }
 
 .chart__line {
@@ -25,6 +34,7 @@
   fill: none;
   stroke-width: 1.2;
   stroke-dasharray: 3.5;
+  animation: dash 2s ease-out;
 }
 
 .chart__label {
@@ -35,7 +45,21 @@
 }
 
 .chart__node {
+  position: relative;
   fill: var(--primary-clr-600);
+  animation: roll-up 1s ease-out;
+}
+
+.chart__node::after {
+  content: "hello";
+  position: relative;
+  top: 10px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: red;
 }
 
 .chart__node__text {
@@ -56,12 +80,40 @@
   stroke-width: 1;
   transform: translateY(200%);
 }
-
 .chart__node:hover .chart__node__text {
   opacity: 1;
   transform: translate(-20px, -10px);
 }
 
-.chart__node__text:hover {
-  opacity: 0;
+@keyframes roll-up {
+  0% {
+    opacity: 0;
+    transform: translateY(-15%)
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0)
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes dash {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    stroke-dashoffset: 21;
+  }
 }

@@ -4,13 +4,11 @@ import "../css/chart.css";
 
 export default function Chart({ data }) {
   const d3LineChart = useRef();
-  console.log(data)
 
 
   useEffect(() => {
     var temperaturesByDate = []
     var temperatures = []
-    var parseTime = d3.timeParse("%d-%b-%y");
     data.forEach((item) => {
       if (item) {
         var date = parseInt(item.dt.$numberInt) * 1000 || parseInt(item.dt.$numberDouble) * 1000 || parseInt(item.dt.$date.$numberLong)
@@ -22,17 +20,16 @@ export default function Chart({ data }) {
       }
     })
 
-    console.log(temperaturesByDate);
-
     const margin = { top: 20, right: 30, bottom: 30, left: 30 };
     const width = parseInt(d3.select("#d3demo").style("width"));
     const height = parseInt(d3.select("#d3demo").style("height"));
 
     // create svg element:
     const svg = d3.select(d3LineChart.current)
-      .attr('width', width + margin.left + margin.right)
-      .attr('height', height + margin.top + margin.bottom + 40)
+      .attr('class', 'chart')
+      .attr("viewBox", `0 0 ${width + margin.left + margin.right} ${height + margin.top + margin.bottom + 40}`)
       .append('g')
+      .attr("preserveAspectRatio", "xMinYMin meet")
       .attr('transform', 'translate(' + margin.left + ', ' + margin.top + ')');
 
     const x = d3.scaleTime()

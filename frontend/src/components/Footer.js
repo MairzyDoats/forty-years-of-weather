@@ -6,7 +6,6 @@ export default function Footer() {
 
   return (
     <div className="footer">
-      <a className="footer__link" href="/">Imprint</a>
       <p className="footer__copyright">&copy;{date.getFullYear()} Julian Krüger</p>
     </div>
 
