@@ -20,7 +20,7 @@ export default function Chart({ data }) {
       }
     })
 
-    const margin = { top: 20, right: 30, bottom: 30, left: 30 };
+    const margin = { top: 20, right: 50, bottom: 30, left: 50 };
     const width = parseInt(d3.select("#d3demo").style("width"));
     const height = parseInt(d3.select("#d3demo").style("height"));
 
